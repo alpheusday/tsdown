@@ -89,16 +89,87 @@ const defineConfigFn = (
     return _defineConfig(processPresetResults(presetResults));
 };
 
-const defineConfig = (
-    options?: UserConfig,
-    presets?: Preset[],
-): UserConfig[] => {
+/**
+ * Define tsdown configuration.
+ *
+ * ### Example
+ *
+ * ```ts
+ * import type { UserConfig } from "tsdown";
+ *
+ * import { defineConfig } from "@apst/tsdown";
+ * import {
+ *     esmPreset,
+ *     cjsPreset,
+ *     dtsPreset,
+ *     iifePreset,
+ * } from "@apst/tsdown/presets";
+ *
+ * const options: UserConfig = {
+ *     entry: {
+ *         index: "./src/index.ts",
+ *     },
+ * };
+ *
+ * const iifeOptions: UserConfig = {
+ *     entry: {
+ *         init: "./src/init.ts",
+ *     },
+ * };
+ *
+ * export default defineConfig([
+ *     esmPreset(options),
+ *     cjsPreset(options),
+ *     dtsPreset(options),
+ *     iifePreset(iifeOptions),
+ * ]);
+ * ```
+ */
+function defineConfig(presets?: Preset[]): UserConfig[];
+
+/**
+ * Define tsdown configuration.
+ *
+ * ### Example
+ *
+ * ```ts
+ * import { defineConfig } from "@apst/tsdown";
+ * import { esmPreset, cjsPreset, dtsPreset } from "@apst/tsdown/presets";
+ *
+ * export default defineConfig(
+ *     {
+ *         entry: {
+ *             index: "./src/index.ts",
+ *         },
+ *     },
+ *     [
+ *         esmPreset(),
+ *         cjsPreset(),
+ *         dtsPreset(),
+ *     ],
+ * );
+ * ```
+ */
+function defineConfig(options?: UserConfig, presets?: Preset[]): UserConfig[];
+
+function defineConfig(
+    presetsOrOptions?: Preset[] | UserConfig,
+    optionalPresets?: Preset[],
+): UserConfig[] {
     try {
+        const options: UserConfig | undefined = Array.isArray(presetsOrOptions)
+            ? void 0
+            : presetsOrOptions;
+
+        const presets: Preset[] | undefined = Array.isArray(presetsOrOptions)
+            ? presetsOrOptions
+            : optionalPresets;
+
         return defineConfigFn(options, presets);
     } catch (err: unknown) {
         console.error(err);
         throw err;
     }
-};
+}
 
 export { defineConfig };

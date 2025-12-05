@@ -45,26 +45,35 @@ export default defineConfig(
 );
 ```
 
-For IIFE builds:
+With IIFE output:
 
 ```ts
-import { defineConfig } from "@apst/tsdown";
-import { iifePreset } from "@apst/tsdown";
+import type { UserConfig } from "tsdown";
 
-export default defineConfig(
-    {
-        entry: {
-            index: "./src/index.ts",
-        },
+import { defineConfig } from "@apst/tsdown";
+import { esmPreset, cjsPreset, dtsPreset, iifePreset } from "@apst/tsdown";
+
+const options: UserConfig = {
+    entry: {
+        index: "./src/index.ts",
     },
-    [
-        iifePreset({
-            noExternal: [
-                /** ... */
-            ],
-        }),
+};
+
+const iifeOptions: UserConfig = {
+    entry: {
+        init: "./src/init.ts",
+    },
+    noExternal: [
+        /** ... */
     ],
-);
+};
+
+export default defineConfig([
+    esmPreset(options),
+    cjsPreset(options),
+    dtsPreset(options),
+    iifePreset(iifeOptions),
+]);
 ```
 
 ## License
