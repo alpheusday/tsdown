@@ -13,6 +13,7 @@ const OPTIONS_DEFAULT: UserConfig = {
     minify: false,
     shims: true,
     unbundle: true,
+    hash: false,
     inputOptions: {
         experimental: {
             attachDebugInfo: "none",

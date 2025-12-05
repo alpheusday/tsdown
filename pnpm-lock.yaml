@@ -30,7 +30,13 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  examples/common:
+  examples/cjs:
+    dependencies:
+      '@apst/tsdown':
+        specifier: workspace:*
+        version: link:../../package
+
+  examples/esm:
     dependencies:
       '@apst/tsdown':
         specifier: workspace:*
