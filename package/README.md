@@ -2,15 +2,13 @@
 
 A shareable tsdown configuration.
 
+## Usage
+
 Implement the preset into `tsdown.config.ts`:
 
 ```ts
-import {
-    defineConfig,
-    esmPreset,
-    cjsPreset,
-    dtsPreset,
-} from "@apst/tsdown";
+import { defineConfig } from "@apst/tsdown";
+import { esmPreset, cjsPreset, dtsPreset } from "@apst/tsdown";
 
 export default defineConfig(
     {
@@ -29,10 +27,8 @@ export default defineConfig(
 For IIFE builds:
 
 ```ts
-import { 
-    defineConfig,
-    iifePreset,
-} from "@apst/tsdown";
+import { defineConfig } from "@apst/tsdown";
+import { iifePreset } from "@apst/tsdown";
 
 export default defineConfig(
     {

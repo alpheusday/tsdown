@@ -5,6 +5,7 @@ import { defineConfig } from "tsdown";
 const options: UserConfig = {
     entry: {
         index: "./src/index.ts",
+        presets: "./src/presets.ts",
     },
     dts: false,
     outDir: "./dist",
@@ -15,6 +16,7 @@ const options: UserConfig = {
     minify: false,
     shims: true,
     unbundle: false,
+    hash: false,
     inputOptions: {
         experimental: {
             attachDebugInfo: "none",
@@ -32,6 +34,7 @@ export default defineConfig([
         format: "cjs",
         outputOptions: {
             entryFileNames: ({ name }) => `${name}.js`,
+            chunkFileNames: ({ name }) => `${name}.js`,
         },
     },
     {
@@ -41,6 +44,7 @@ export default defineConfig([
         },
         outputOptions: {
             entryFileNames: ({ name }) => `${name}.ts`,
+            chunkFileNames: ({ name }) => `${name}.ts`,
         },
     },
 ]);

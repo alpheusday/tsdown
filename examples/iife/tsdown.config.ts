@@ -1,4 +1,5 @@
-import { defineConfig, iifePreset } from "@apst/tsdown";
+import { defineConfig } from "@apst/tsdown";
+import { iifePreset } from "@apst/tsdown/presets";
 
 export default defineConfig(
     {

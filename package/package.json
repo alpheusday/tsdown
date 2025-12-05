@@ -30,6 +30,11 @@
             "import": "./dist/index.mjs",
             "require": "./dist/index.js"
         },
+        "./presets": {
+            "types": "./dist/presets.d.ts",
+            "import": "./dist/presets.mjs",
+            "require": "./dist/presets.js"
+        },
         "./package.json": "./package.json"
     },
     "main": "./dist/index.js",
