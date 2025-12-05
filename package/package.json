@@ -1,0 +1,57 @@
+{
+    "name": "@apst/tsdown",
+    "version": "0.1.0",
+    "description": "A shareable tsdown configuration",
+    "keywords": [
+        "tsdown",
+        "configuration",
+        "config",
+        "ts",
+        "typescript",
+        "js",
+        "javascript"
+    ],
+    "homepage": "https://github.com/alpheusday/shared.js",
+    "bugs": "https://github.com/alpheusday/shared.js/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alpheusday/shared.js.git",
+        "directory": "packages/tsdown"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Alpheus",
+        "email": "contact@alphe.us"
+    },
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "es-toolkit": "^1.42.0",
+        "oxc-resolver": "^11.14.2"
+    },
+    "devDependencies": {
+        "@types/node": "^24.10.1",
+        "tsdown": "0.16.0"
+    },
+    "peerDependencies": {
+        "tsdown": "~0.16.0"
+    },
+    "peerDependenciesMeta": {
+        "tsdown": {
+            "optional": true
+        }
+    }
+}

@@ -1,0 +1,10 @@
+packages:
+    - ./package
+    - ./test
+    - ./examples/*
+
+minimumReleaseAge: 1440
+
+minimumReleaseAgeExclude:
+    - "@apst/biome"
+    - "@apst/tsconfig"

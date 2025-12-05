@@ -1,0 +1,7 @@
+{
+    "name": "example-iife",
+    "private": true,
+    "dependencies": {
+        "@apst/tsdown": "workspace:*"
+    }
+}

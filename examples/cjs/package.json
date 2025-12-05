@@ -1,0 +1,7 @@
+{
+    "name": "example-common",
+    "private": true,
+    "dependencies": {
+        "@apst/tsdown": "workspace:*"
+    }
+}
