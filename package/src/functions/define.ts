@@ -43,7 +43,7 @@ const resolvePackageJson = (
     options: ResolvePackageJsonPathOptions,
 ): PackageJson | undefined => {
     const pkgJsonPath: string | undefined = resolvePackageJsonPath(options);
-    if (!pkgJsonPath) return undefined;
+    if (!pkgJsonPath) return void 0;
     return JSON.parse(Fs.readFileSync(pkgJsonPath, "utf-8"));
 };
 
