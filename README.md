@@ -29,7 +29,11 @@ Implement the preset into `tsdown.config.ts`:
 
 ```ts
 import { defineConfig } from "@apst/tsdown";
-import { esmPreset, cjsPreset, dtsPreset } from "@apst/tsdown";
+import { 
+    esmPreset,
+    cjsPreset,
+    dtsPreset,
+} from "@apst/tsdown";
 
 export default defineConfig(
     {
@@ -51,7 +55,12 @@ With IIFE output:
 import type { UserConfig } from "tsdown";
 
 import { defineConfig } from "@apst/tsdown";
-import { esmPreset, cjsPreset, dtsPreset, iifePreset } from "@apst/tsdown";
+import { 
+    esmPreset,
+    cjsPreset,
+    dtsPreset,
+    iifePreset,
+} from "@apst/tsdown";
 
 const options: UserConfig = {
     entry: {
