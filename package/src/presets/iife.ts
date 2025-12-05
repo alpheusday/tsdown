@@ -2,11 +2,11 @@ import type { UserConfig } from "tsdown";
 
 import type { Preset, PresetResult } from "#/@types/preset";
 
-import { merge } from "es-toolkit";
+import { toMerged } from "es-toolkit";
 
 const iifePreset = (options?: UserConfig): Preset => {
     return ({ config: internalOptions }): PresetResult => {
-        const optsRaw: UserConfig = merge(internalOptions, {
+        const optsRaw: UserConfig = toMerged(internalOptions, {
             sourcemap: false,
             minify: true,
             unbundle: false,
@@ -15,7 +15,7 @@ const iifePreset = (options?: UserConfig): Preset => {
             },
         } satisfies UserConfig);
 
-        const opts: UserConfig = merge(optsRaw, options ?? {});
+        const opts: UserConfig = toMerged(optsRaw, options ?? {});
 
         return {
             key: "iife",

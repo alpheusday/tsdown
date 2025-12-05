@@ -2,11 +2,11 @@ import type { UserConfig } from "tsdown";
 
 import type { Preset, PresetResult } from "#/@types/preset";
 
-import { merge } from "es-toolkit";
+import { toMerged } from "es-toolkit";
 
 const cjsPreset = (options?: UserConfig): Preset => {
     return ({ type, config: internalOptions }): PresetResult => {
-        const optsRaw: UserConfig = merge(internalOptions, {
+        const optsRaw: UserConfig = toMerged(internalOptions, {
             outputOptions: {
                 ...(type === "commonjs"
                     ? {
@@ -16,7 +16,7 @@ const cjsPreset = (options?: UserConfig): Preset => {
             },
         } satisfies UserConfig);
 
-        const opts: UserConfig = merge(optsRaw, options ?? {});
+        const opts: UserConfig = toMerged(optsRaw, options ?? {});
 
         return {
             key: "cjs",
