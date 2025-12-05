@@ -1,6 +1,9 @@
 import type { UserConfig } from "tsdown";
 
-const DEFAULT_OPTIONS: UserConfig = {
+/**
+ * Default options for `tsdown` configuration.
+ */
+const OPTIONS_DEFAULT: UserConfig = {
     dts: false,
     outDir: "./dist",
     clean: true,
@@ -17,4 +20,4 @@ const DEFAULT_OPTIONS: UserConfig = {
     },
 };
 
-export { DEFAULT_OPTIONS };
+export { OPTIONS_DEFAULT };

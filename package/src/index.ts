@@ -1,6 +1,5 @@
 export type {
     Preset,
-    PresetKey,
     PresetOptions,
     PresetResult,
 } from "#/@types/preset";

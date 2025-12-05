@@ -5,8 +5,8 @@ import type { Preset, PresetResult } from "#/@types/preset";
 import { toMerged } from "es-toolkit";
 
 const esmPreset = (options?: UserConfig): Preset => {
-    return ({ type, config: internalOptions }): PresetResult => {
-        const optsRaw: UserConfig = toMerged(internalOptions, {
+    return ({ type, options: internalOptions }): PresetResult => {
+        const optsPreset: UserConfig = {
             outputOptions: {
                 ...(type === "module"
                     ? {
@@ -14,13 +14,14 @@ const esmPreset = (options?: UserConfig): Preset => {
                       }
                     : {}),
             },
-        } satisfies UserConfig);
+        };
 
-        const opts: UserConfig = toMerged(optsRaw, options ?? {});
+        const optsBase: UserConfig = toMerged(internalOptions, optsPreset);
+
+        const opts: UserConfig = toMerged(optsBase, options ?? {});
 
         return {
-            key: "esm",
-            config: {
+            options: {
                 ...opts,
                 format: "esm",
             },

@@ -5,21 +5,22 @@ import type { Preset, PresetResult } from "#/@types/preset";
 import { toMerged } from "es-toolkit";
 
 const iifePreset = (options?: UserConfig): Preset => {
-    return ({ config: internalOptions }): PresetResult => {
-        const optsRaw: UserConfig = toMerged(internalOptions, {
+    return ({ options: internalOptions }): PresetResult => {
+        const optsPreset: UserConfig = {
             sourcemap: false,
             minify: true,
             unbundle: false,
             outputOptions: {
                 entryFileNames: ({ name }) => `${name}.js`,
             },
-        } satisfies UserConfig);
+        };
 
-        const opts: UserConfig = toMerged(optsRaw, options ?? {});
+        const optsBase: UserConfig = toMerged(internalOptions, optsPreset);
+
+        const opts: UserConfig = toMerged(optsBase, options ?? {});
 
         return {
-            key: "iife",
-            config: {
+            options: {
                 ...opts,
                 format: "iife",
             },

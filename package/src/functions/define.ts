@@ -9,7 +9,7 @@ import { toMerged } from "es-toolkit";
 import { ResolverFactory } from "oxc-resolver";
 import { defineConfig as _defineConfig } from "tsdown";
 
-import { DEFAULT_OPTIONS } from "#/constants";
+import { OPTIONS_DEFAULT } from "#/constants";
 
 type PackageJson = {
     type?: "commonjs" | "module";
@@ -51,7 +51,7 @@ const processPresetResults = (presetResults: PresetResult[]): UserConfig[] => {
     const result: UserConfig[] = [];
 
     for (const presetResult of presetResults) {
-        result.push(presetResult.config);
+        result.push(presetResult.options);
     }
 
     return result;
@@ -61,7 +61,7 @@ const defineConfigFn = (
     options?: UserConfig,
     presets?: Preset[],
 ): UserConfig[] => {
-    const opts: UserConfig = toMerged(DEFAULT_OPTIONS, options ?? {});
+    const opts: UserConfig = toMerged(OPTIONS_DEFAULT, options ?? {});
 
     const presetResults: PresetResult[] = [];
 
@@ -80,7 +80,7 @@ const defineConfigFn = (
     for (const preset of presets) {
         const presetResult: PresetResult = preset({
             type: isESM ? "module" : "commonjs",
-            config: opts,
+            options: opts,
         });
 
         presetResults.push(presetResult);

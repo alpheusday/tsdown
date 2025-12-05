@@ -1,17 +1,32 @@
 import type { UserConfig } from "tsdown";
 
+/**
+ * Preset options.
+ */
 type PresetOptions = {
+    /**
+     * Type of the project.
+     */
     type: "commonjs" | "module";
-    config: UserConfig;
+    /**
+     * Options.
+     */
+    options: UserConfig;
 };
 
-type PresetKey = "esm" | "cjs" | "dts" | "iife";
-
+/**
+ * Preset result.
+ */
 type PresetResult = {
-    key: PresetKey;
-    config: UserConfig;
+    /**
+     * Options.
+     */
+    options: UserConfig;
 };
 
+/**
+ * Preset for the build.
+ */
 type Preset = (options: PresetOptions) => PresetResult;
 
-export type { PresetOptions, PresetKey, PresetResult, Preset };
+export type { PresetOptions, PresetResult, Preset };
