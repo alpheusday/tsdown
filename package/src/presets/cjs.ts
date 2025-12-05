@@ -11,6 +11,7 @@ const cjsPreset = (options?: UserConfig): Preset => {
                 ...(type === "commonjs"
                     ? {
                           entryFileNames: ({ name }) => `${name}.js`,
+                          chunkFileNames: ({ name }) => `${name}.js`,
                       }
                     : {}),
             },

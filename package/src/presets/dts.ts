@@ -12,6 +12,7 @@ const dtsPreset = (options?: UserConfig): Preset => {
             },
             outputOptions: {
                 entryFileNames: ({ name }) => `${name}.ts`,
+                chunkFileNames: ({ name }) => `${name}.ts`,
             },
         };
 

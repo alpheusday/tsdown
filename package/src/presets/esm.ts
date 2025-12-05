@@ -11,6 +11,7 @@ const esmPreset = (options?: UserConfig): Preset => {
                 ...(type === "module"
                     ? {
                           entryFileNames: ({ name }) => `${name}.js`,
+                          chunkFileNames: ({ name }) => `${name}.js`,
                       }
                     : {}),
             },
