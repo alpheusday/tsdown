@@ -14,16 +14,15 @@ const options: UserConfig = {
     },
 };
 
+const iifeOptions: UserConfig = {
+    entry: {
+        init: "./src/init.ts",
+    },
+};
+
 export default defineConfig([
-    // @ts-expect-error
     esmPreset(options),
-    // @ts-expect-error
     cjsPreset(options),
-    // @ts-expect-error
     dtsPreset(options),
-    iifePreset({
-        entry: {
-            init: "./src/init.ts",
-        },
-    }),
+    iifePreset(iifeOptions),
 ]);
