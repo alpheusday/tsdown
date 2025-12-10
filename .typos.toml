@@ -6,7 +6,6 @@ extend-exclude = [
     ".DS_Store",
     "node_modules/",
     "dist/",
-    "apis/",
     "*.tsbuildinfo",
     "*.log",
     "pnpm-debug.log*",
