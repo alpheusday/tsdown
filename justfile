@@ -8,6 +8,11 @@ tsdown := node_bin + "tsdown"
 vitest := node_bin + "vitest"
 typedoc := node_bin + "typedoc"
 
+test_cjs := "tests/cjs"
+test_esm := "tests/esm"
+test_dts := "tests/dts"
+test_iife := "tests/iife"
+
 example_cjs := "examples/cjs"
 example_esm := "examples/esm"
 example_iife := "examples/iife"
@@ -43,22 +48,33 @@ build:
 
 # Run tests
 test:
-    cd ./test && ./{{vitest}} run
+    cd ./{{test_cjs}} && ./{{tsdown}} -c tsdown.config.ts && ./{{vitest}} run
+    cd ./{{test_esm}} && ./{{tsdown}} -c tsdown.config.ts && ./{{vitest}} run
+    cd ./{{test_dts}} && ./{{tsdown}} -c tsdown.config.ts && ./{{vitest}} run
+    cd ./{{test_iife}} && ./{{tsdown}} -c tsdown.config.ts && ./{{vitest}} run
 
 # Run tests with different runtimes
 test-all:
-    cd ./test && pnpm run test
-    cd ./test && deno run test
-    cd ./test && bun run test
+    cd ./{{test_cjs}} && pnpm run build && pnpm run test
+    cd ./{{test_cjs}} && bun run build && bun run test
+
+    cd ./{{test_esm}} && pnpm run build && pnpm run test
+    cd ./{{test_esm}} && bun run build && bun run test
+
+    cd ./{{test_dts}} && pnpm run build && pnpm run test
+    cd ./{{test_dts}} && bun run build && bun run test
+
+    cd ./{{test_iife}} && pnpm run build && pnpm run test
+    cd ./{{test_iife}} && bun run build && bun run test
 
 example-cjs:
-    cd ./{{example_cjs}} && ../../{{tsdown}} -c tsdown.config.ts
+    cd ./{{example_cjs}} && ./{{tsdown}} -c tsdown.config.ts
 
 example-esm:
-    cd ./{{example_esm}} && ../../{{tsdown}} -c tsdown.config.ts
+    cd ./{{example_esm}} && ./{{tsdown}} -c tsdown.config.ts
 
 example-iife:
-    cd ./{{example_iife}} && ../../{{tsdown}} -c tsdown.config.ts
+    cd ./{{example_iife}} && ./{{tsdown}} -c tsdown.config.ts
 
 # Generate APIs documentation
 api:

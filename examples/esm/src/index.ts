@@ -1,3 +1,3 @@
-const str = "hello world" as const;
+const str = "Hello, World!" as const;
 
 export { str };

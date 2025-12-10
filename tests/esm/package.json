@@ -1,0 +1,16 @@
+{
+    "name": "test-esm",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "tsdown -c tsdown.config.ts",
+        "test": "vitest run",
+        "": ""
+    },
+    "dependencies": {
+        "@apst/tsdown": "workspace:*",
+        "@types/node": "catalog:dev",
+        "tsdown": "catalog:peer",
+        "vitest": "catalog:test"
+    }
+}

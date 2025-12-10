@@ -3,6 +3,7 @@
     "private": true,
     "type": "module",
     "dependencies": {
-        "@apst/tsdown": "workspace:*"
+        "@apst/tsdown": "workspace:*",
+        "tsdown": "catalog:peer"
     }
 }

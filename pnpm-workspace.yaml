@@ -1,7 +1,16 @@
 packages:
     - ./package
-    - ./test
+    - ./tests/*
     - ./examples/*
+
+catalogs:
+    dev:
+        "@types/node": ^24.10.2
+        "tsdown": 0.17.0
+    peer:
+        "tsdown": ~0.17.0
+    test:
+        "vitest": ^4.0.15
 
 minimumReleaseAge: 1440
 

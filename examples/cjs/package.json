@@ -2,6 +2,7 @@
     "name": "example-common",
     "private": true,
     "dependencies": {
-        "@apst/tsdown": "workspace:*"
+        "@apst/tsdown": "workspace:*",
+        "tsdown": "catalog:peer"
     }
 }

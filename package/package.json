@@ -45,14 +45,14 @@
     ],
     "dependencies": {
         "es-toolkit": "^1.42.0",
-        "oxc-resolver": "^11.14.2"
+        "oxc-resolver": "^11.15.0"
     },
     "devDependencies": {
-        "@types/node": "^24.10.1",
-        "tsdown": "0.17.0"
+        "@types/node": "catalog:dev",
+        "tsdown": "catalog:dev"
     },
     "peerDependencies": {
-        "tsdown": "~0.17.0"
+        "tsdown": "catalog:peer"
     },
     "peerDependenciesMeta": {
         "tsdown": {
