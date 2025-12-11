@@ -33,7 +33,7 @@ import {
     esmPreset,
     cjsPreset,
     dtsPreset,
-} from "@apst/tsdown";
+} from "@apst/tsdown/presets";
 
 export default defineConfig(
     {
@@ -60,7 +60,7 @@ import {
     cjsPreset,
     dtsPreset,
     iifePreset,
-} from "@apst/tsdown";
+} from "@apst/tsdown/presets";
 
 const options: UserConfig = {
     entry: {
