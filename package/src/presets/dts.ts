@@ -9,6 +9,9 @@ const dtsPreset = (options?: UserConfig): Preset => {
         const optsPreset: UserConfig = {
             dts: {
                 emitDtsOnly: true,
+                compilerOptions: {
+                    isolatedDeclarations: true,
+                },
             },
             outputOptions: {
                 entryFileNames: ({ name }) => `${name}.ts`,
