@@ -13,37 +13,41 @@ import { OPTIONS_DEFAULT } from "#/constants";
 
 type PackageJson = {
     type?: "commonjs" | "module";
+    // more...
 };
 
 const ENTRY_DEFAULT = "./src/index.ts" as const;
 
-const resolveEntry = (
+const resolveEntryPath = (
     entry?: string | string[] | Record<string, string>,
 ): string => {
     if (!entry) return ENTRY_DEFAULT;
+
     if (typeof entry === "string") return entry;
+
     if (Array.isArray(entry)) return entry[0] ?? ENTRY_DEFAULT;
+
     return Object.values(entry)[0] ?? ENTRY_DEFAULT;
 };
 
-type ResolvePackageJsonPathOptions = {
+type ResolvePackageJsonOptions = {
+    // current working directory
     cwd: string;
+    // entry path
     entry: string;
 };
 
-const resolvePackageJsonPath = (
-    options: ResolvePackageJsonPathOptions,
-): string | undefined => {
-    const resolver: ResolverFactory = new ResolverFactory();
-    const result: ResolveResult = resolver.sync(options.cwd, options.entry);
-    return result.packageJsonPath;
-};
-
 const resolvePackageJson = (
-    options: ResolvePackageJsonPathOptions,
+    options: ResolvePackageJsonOptions,
 ): PackageJson | undefined => {
-    const pkgJsonPath: string | undefined = resolvePackageJsonPath(options);
+    const resolver: ResolverFactory = new ResolverFactory();
+
+    const result: ResolveResult = resolver.sync(options.cwd, options.entry);
+
+    const pkgJsonPath: string | undefined = result.packageJsonPath;
+
     if (!pkgJsonPath) return void 0;
+
     return JSON.parse(Fs.readFileSync(pkgJsonPath, "utf-8"));
 };
 
@@ -67,7 +71,7 @@ const defineConfigFn = (
 
     const pkgJson: PackageJson | undefined = resolvePackageJson({
         cwd: opts.cwd ?? process.cwd(),
-        entry: resolveEntry(opts.entry),
+        entry: resolveEntryPath(opts.entry),
     });
 
     if (!presets || !pkgJson)

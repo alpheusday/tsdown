@@ -1,8 +1,5 @@
 import type { UserConfig } from "tsdown";
 
-/**
- * Default options for `tsdown` configuration.
- */
 const OPTIONS_DEFAULT: UserConfig = {
     dts: false,
     outDir: "./dist",
