@@ -10,21 +10,8 @@ import { toMerged } from "es-toolkit";
  * This preset includes the default CommonJS options.
  */
 const cjsPreset = (options?: UserConfig): Preset => {
-    return ({ type, options: internalOptions }): PresetResult => {
-        const optsPreset: UserConfig = {
-            outputOptions: {
-                ...(type === "commonjs"
-                    ? {
-                          entryFileNames: ({ name }) => `${name}.js`,
-                          chunkFileNames: ({ name }) => `${name}.js`,
-                      }
-                    : {}),
-            },
-        };
-
-        const optsBase: UserConfig = toMerged(internalOptions, optsPreset);
-
-        const opts: UserConfig = toMerged(optsBase, options ?? {});
+    return ({ options: internalOptions }): PresetResult => {
+        const opts: UserConfig = toMerged(internalOptions, options ?? {});
 
         return {
             options: {

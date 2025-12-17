@@ -18,6 +18,7 @@ const dtsPreset = (options?: UserConfig): Preset => {
                     isolatedDeclarations: true,
                 },
             },
+            // always output .d.ts
             outputOptions: {
                 entryFileNames: ({ name }) => `${name}.ts`,
                 chunkFileNames: ({ name }) => `${name}.ts`,

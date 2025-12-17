@@ -13,6 +13,7 @@ const OPTIONS_DEFAULT = {
     minify: false,
     shims: true,
     unbundle: true,
+    fixedExtension: false,
     hash: false,
     inputOptions: {
         experimental: {
