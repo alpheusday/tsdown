@@ -16,9 +16,6 @@ yarn add @apst/tsdown
 # pnpm
 pnpm add @apst/tsdown
 
-# Deno
-deno add npm:@apst/tsdown
-
 # Bun
 bun add @apst/tsdown
 ```
