@@ -12,8 +12,6 @@ import { toMerged } from "es-toolkit";
 const iifePreset = (options?: UserConfig): Preset => {
     return ({ options: internalOptions }): PresetResult => {
         const optsPreset: UserConfig = {
-            sourcemap: false,
-            minify: true,
             unbundle: false,
             outputOptions: {
                 entryFileNames: ({ name }) => `${name}.js`,
