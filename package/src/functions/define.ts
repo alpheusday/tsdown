@@ -55,7 +55,20 @@ const processPresetResults = (presetResults: PresetResult[]): UserConfig[] => {
     const result: UserConfig[] = [];
 
     for (const presetResult of presetResults) {
-        result.push(presetResult.options);
+        // undefined
+        if (!presetResult.options) continue;
+
+        // array
+        if (Array.isArray(presetResult.options)) {
+            for (const opts of presetResult.options) {
+                result.push(opts);
+            }
+        }
+
+        // object
+        else {
+            result.push(presetResult.options);
+        }
     }
 
     return result;

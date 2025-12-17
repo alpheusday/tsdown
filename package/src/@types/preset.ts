@@ -21,7 +21,7 @@ type PresetResult = {
     /**
      * Options.
      */
-    options: UserConfig;
+    options?: UserConfig | UserConfig[];
 };
 
 /**

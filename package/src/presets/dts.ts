@@ -24,9 +24,7 @@ const dtsPreset = (options?: UserConfig): Preset => {
         const opts: UserConfig = toMerged(optsBase, options ?? {});
 
         return {
-            options: {
-                ...opts,
-            },
+            options: opts,
         };
     };
 };
