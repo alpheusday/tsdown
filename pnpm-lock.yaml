@@ -7,8 +7,8 @@ settings:
 catalogs:
   dev:
     '@types/node':
-      specifier: ^24
-      version: 24.10.2
+      specifier: ^25
+      version: 25.0.2
     tsdown:
       specifier: 0.18.0
       version: 0.18.0
@@ -85,7 +85,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: catalog:dev
-        version: 24.10.2
+        version: 25.0.2
       tsdown:
         specifier: catalog:dev
         version: 0.18.0(oxc-resolver@11.15.0)(synckit@0.11.11)(typescript@5.9.3)
@@ -97,13 +97,13 @@ importers:
         version: link:../../package
       '@types/node':
         specifier: catalog:dev
-        version: 24.10.2
+        version: 25.0.2
       tsdown:
         specifier: catalog:peer
         version: 0.18.0(oxc-resolver@11.15.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
-        version: 4.0.15(@types/node@24.10.2)(yaml@2.8.1)
+        version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
 
   tests/dts:
     dependencies:
@@ -112,13 +112,13 @@ importers:
         version: link:../../package
       '@types/node':
         specifier: catalog:dev
-        version: 24.10.2
+        version: 25.0.2
       tsdown:
         specifier: catalog:peer
         version: 0.18.0(oxc-resolver@11.15.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
-        version: 4.0.15(@types/node@24.10.2)(yaml@2.8.1)
+        version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
 
   tests/esm:
     dependencies:
@@ -127,13 +127,13 @@ importers:
         version: link:../../package
       '@types/node':
         specifier: catalog:dev
-        version: 24.10.2
+        version: 25.0.2
       tsdown:
         specifier: catalog:peer
         version: 0.18.0(oxc-resolver@11.15.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
-        version: 4.0.15(@types/node@24.10.2)(yaml@2.8.1)
+        version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
 
   tests/iife:
     dependencies:
@@ -142,13 +142,13 @@ importers:
         version: link:../../package
       '@types/node':
         specifier: catalog:dev
-        version: 24.10.2
+        version: 25.0.2
       tsdown:
         specifier: catalog:peer
         version: 0.18.0(oxc-resolver@11.15.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
-        version: 4.0.15(@types/node@24.10.2)(yaml@2.8.1)
+        version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
 
 packages:
 
@@ -786,8 +786,8 @@ packages:
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
 
-  '@types/node@24.10.2':
-    resolution: {integrity: sha512-WOhQTZ4G8xZ1tjJTvKOpyEVSGgOTvJAfDK3FNFgELyaTpzhdgHVHeqW8V+UJvzF5BT+/B54T/1S2K6gd9c7bbA==}
+  '@types/node@25.0.2':
+    resolution: {integrity: sha512-gWEkeiyYE4vqjON/+Obqcoeffmk0NF15WSBwSs7zwVA2bAbTaE0SJ7P0WNGoJn8uE7fiaV5a7dKYIJriEqOrmA==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -1603,7 +1603,7 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
-  '@types/node@24.10.2':
+  '@types/node@25.0.2':
     dependencies:
       undici-types: 7.16.0
 
@@ -1618,13 +1618,13 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.15(vite@7.2.7(@types/node@24.10.2)(yaml@2.8.1))':
+  '@vitest/mocker@4.0.15(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1))':
     dependencies:
       '@vitest/spy': 4.0.15
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.2.7(@types/node@24.10.2)(yaml@2.8.1)
+      vite: 7.2.7(@types/node@25.0.2)(yaml@2.8.1)
 
   '@vitest/pretty-format@4.0.15':
     dependencies:
@@ -1958,7 +1958,7 @@ snapshots:
     optionalDependencies:
       synckit: 0.11.11
 
-  vite@7.2.7(@types/node@24.10.2)(yaml@2.8.1):
+  vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -1967,14 +1967,14 @@ snapshots:
       rollup: 4.53.3
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 24.10.2
+      '@types/node': 25.0.2
       fsevents: 2.3.3
       yaml: 2.8.1
 
-  vitest@4.0.15(@types/node@24.10.2)(yaml@2.8.1):
+  vitest@4.0.15(@types/node@25.0.2)(yaml@2.8.1):
     dependencies:
       '@vitest/expect': 4.0.15
-      '@vitest/mocker': 4.0.15(vite@7.2.7(@types/node@24.10.2)(yaml@2.8.1))
+      '@vitest/mocker': 4.0.15(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1))
       '@vitest/pretty-format': 4.0.15
       '@vitest/runner': 4.0.15
       '@vitest/snapshot': 4.0.15
@@ -1991,10 +1991,10 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.2.7(@types/node@24.10.2)(yaml@2.8.1)
+      vite: 7.2.7(@types/node@25.0.2)(yaml@2.8.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 24.10.2
+      '@types/node': 25.0.2
     transitivePeerDependencies:
       - jiti
       - less

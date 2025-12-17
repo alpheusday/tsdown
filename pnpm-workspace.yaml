@@ -5,7 +5,7 @@ packages:
 
 catalogs:
     dev:
-        "@types/node": ^24
+        "@types/node": ^25
         "tsdown": 0.18.0
     peer:
         "tsdown": ~0.18.0
