@@ -11,12 +11,12 @@
         "js",
         "javascript"
     ],
-    "homepage": "https://github.com/alpheusday/shared.js",
-    "bugs": "https://github.com/alpheusday/shared.js/issues",
+    "homepage": "https://github.com/alpheusday/tsdown",
+    "bugs": "https://github.com/alpheusday/tsdown/issues",
     "repository": {
         "type": "git",
-        "url": "https://github.com/alpheusday/shared.js.git",
-        "directory": "packages/tsdown"
+        "url": "https://github.com/alpheusday/tsdown.git",
+        "directory": "package"
     },
     "license": "MIT",
     "author": {
