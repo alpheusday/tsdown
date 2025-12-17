@@ -1,4 +1,4 @@
-# Alpheus tsdown configuration
+# Alpheus tsdown Configuration
 
 A shareable tsdown configuration.
 
