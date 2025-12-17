@@ -4,6 +4,11 @@ import type { Preset, PresetResult } from "#/@types/preset";
 
 import { toMerged } from "es-toolkit";
 
+/**
+ * CommonJS preset.
+ *
+ * This preset includes the default CommonJS options.
+ */
 const cjsPreset = (options?: UserConfig): Preset => {
     return ({ type, options: internalOptions }): PresetResult => {
         const optsPreset: UserConfig = {

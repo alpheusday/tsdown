@@ -4,6 +4,11 @@ import type { Preset, PresetResult } from "#/@types/preset";
 
 import { toMerged } from "es-toolkit";
 
+/**
+ * DTS preset.
+ *
+ * This preset includes the default DTS options.
+ */
 const dtsPreset = (options?: UserConfig): Preset => {
     return ({ options: internalOptions }): PresetResult => {
         const optsPreset: UserConfig = {

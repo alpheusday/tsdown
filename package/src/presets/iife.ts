@@ -4,6 +4,11 @@ import type { Preset, PresetResult } from "#/@types/preset";
 
 import { toMerged } from "es-toolkit";
 
+/**
+ * IIFE preset.
+ *
+ * This preset includes the default IIFE options.
+ */
 const iifePreset = (options?: UserConfig): Preset => {
     return ({ options: internalOptions }): PresetResult => {
         const optsPreset: UserConfig = {

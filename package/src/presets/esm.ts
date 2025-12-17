@@ -4,6 +4,11 @@ import type { Preset, PresetResult } from "#/@types/preset";
 
 import { toMerged } from "es-toolkit";
 
+/**
+ * ESModule preset.
+ *
+ * This preset includes the default ESModule options.
+ */
 const esmPreset = (options?: UserConfig): Preset => {
     return ({ type, options: internalOptions }): PresetResult => {
         const optsPreset: UserConfig = {
