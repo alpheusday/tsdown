@@ -5,12 +5,12 @@ packages:
 
 catalogs:
     dev:
-        "@types/node": ^24.10.2
-        "tsdown": 0.17.0
+        "@types/node": ^24
+        "tsdown": 0.18.0
     peer:
-        "tsdown": ~0.17.0
+        "tsdown": ~0.18.0
     test:
-        "vitest": ^4.0.15
+        "vitest": ^4
 
 minimumReleaseAge: 1440
 

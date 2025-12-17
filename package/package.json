@@ -44,7 +44,7 @@
         "dist"
     ],
     "dependencies": {
-        "es-toolkit": "^1.42.0",
+        "es-toolkit": "^1.43.0",
         "oxc-resolver": "^11.15.0"
     },
     "devDependencies": {
