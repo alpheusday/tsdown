@@ -14,15 +14,23 @@ const options: UserConfig = {
     },
 };
 
-const iifeOptions: UserConfig = {
+const iifeDevOptions: UserConfig = {
     entry: {
         init: "./src/init.ts",
     },
+};
+
+const iifePrdOptions: UserConfig = {
+    entry: {
+        "init.min": "./src/init.ts",
+    },
+    minify: true,
 };
 
 export default defineConfig([
     esmPreset(options),
     cjsPreset(options),
     dtsPreset(options),
-    iifePreset(iifeOptions),
+    iifePreset(iifeDevOptions),
+    iifePreset(iifePrdOptions),
 ]);

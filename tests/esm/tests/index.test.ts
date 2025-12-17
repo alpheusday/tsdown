@@ -5,9 +5,9 @@ import { describe, expect, it } from "vitest";
 
 const CWD: string = process.cwd();
 
-const PATH_DIST = Path.join(CWD, "dist");
+const PATH_DIST: string = Path.join(CWD, "dist");
 
-const PATH_INDEX = Path.join(PATH_DIST, "index.js");
+const PATH_INDEX: string = Path.join(PATH_DIST, "index.js");
 
 describe("ESModule tests", (): void => {
     it("should work", async (): Promise<void> => {

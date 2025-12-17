@@ -5,9 +5,9 @@ import { describe, expect, it } from "vitest";
 
 const CWD: string = process.cwd();
 
-const PATH_DIST = Path.join(CWD, "dist");
+const PATH_DIST: string = Path.join(CWD, "dist");
 
-const PATH_INDEX = Path.join(PATH_DIST, "index.d.ts");
+const PATH_INDEX: string = Path.join(PATH_DIST, "index.d.ts");
 
 describe("DTS tests", (): void => {
     it("should work", async (): Promise<void> => {
