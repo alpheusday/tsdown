@@ -1,4 +1,4 @@
-import type { UserConfig } from "tsdown";
+import type { OutExtensionObject, UserConfig } from "tsdown";
 
 import type { Preset, PresetResult } from "#/@types/preset";
 
@@ -19,9 +19,10 @@ const dtsPreset = (options?: UserConfig): Preset => {
                 },
             },
             // always output .d.ts
-            outputOptions: {
-                entryFileNames: ({ name }) => `${name}.ts`,
-                chunkFileNames: ({ name }) => `${name}.ts`,
+            outExtensions: (): OutExtensionObject => {
+                return {
+                    dts: ".ts",
+                };
             },
         };
 

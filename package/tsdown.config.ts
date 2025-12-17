@@ -1,4 +1,4 @@
-import type { UserConfig } from "tsdown";
+import type { OutExtensionObject, UserConfig } from "tsdown";
 
 import { defineConfig } from "tsdown";
 
@@ -28,23 +28,24 @@ export default defineConfig([
     {
         ...options,
         format: "esm",
+        outExtensions: (): OutExtensionObject => ({
+            js: ".mjs",
+        }),
     },
     {
         ...options,
         format: "cjs",
-        outputOptions: {
-            entryFileNames: ({ name }) => `${name}.js`,
-            chunkFileNames: ({ name }) => `${name}.js`,
-        },
+        outExtensions: (): OutExtensionObject => ({
+            js: ".js",
+        }),
     },
     {
         ...options,
         dts: {
             emitDtsOnly: true,
         },
-        outputOptions: {
-            entryFileNames: ({ name }) => `${name}.ts`,
-            chunkFileNames: ({ name }) => `${name}.ts`,
-        },
+        outExtensions: (): OutExtensionObject => ({
+            dts: ".ts",
+        }),
     },
 ]);

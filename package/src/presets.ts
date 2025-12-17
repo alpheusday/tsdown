@@ -3,6 +3,8 @@ export type {
     PresetOptions,
     PresetResult,
 } from "#/@types/preset";
+export type { ExtraOptionsCJS, PresetOptionsCJS } from "#/presets/cjs";
+export type { ExtraOptionsESM, PresetOptionsESM } from "#/presets/esm";
 
 export { blankPreset } from "#/presets/blank";
 export { cjsPreset } from "#/presets/cjs";

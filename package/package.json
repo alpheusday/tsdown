@@ -23,7 +23,6 @@
         "name": "Alpheus",
         "email": "contact@alphe.us"
     },
-    "type": "module",
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
