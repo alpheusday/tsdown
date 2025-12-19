@@ -6,7 +6,7 @@ packages:
 catalogs:
     dev:
         "@types/node": ^25
-        "tsdown": 0.18.0
+        "tsdown": 0.18.1
     peer:
         "tsdown": ~0.18.0
     test:
