@@ -15,3 +15,5 @@ updates:
       ignore:
           - dependency-name: "es-toolkit"
           - dependency-name: "oxc-resolver"
+      exclude-paths:
+          - "./pnpm-workspace.yaml"

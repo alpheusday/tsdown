@@ -6,8 +6,10 @@ packages:
 catalogs:
     dev:
         "@types/node": ^25
+        # Minimum supported version
         "tsdown": 0.18.0
     peer:
+        # Supported versions
         "tsdown": ~0.18.0
     test:
         "vitest": ^4
