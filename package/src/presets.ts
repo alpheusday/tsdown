@@ -9,6 +9,7 @@ export type {
     PresetResult,
 } from "#/@types/preset";
 export type { ExtraOptionsCJS, PresetOptionsCJS } from "#/presets/cjs";
+export type { ExtraOptionsDTS, PresetOptionsDTS } from "#/presets/dts";
 export type { ExtraOptionsESM, PresetOptionsESM } from "#/presets/esm";
 
 export { blankPreset } from "#/presets/blank";
