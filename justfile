@@ -8,6 +8,8 @@ tsdown := node_bin + "tsdown"
 vitest := node_bin + "vitest"
 typedoc := node_bin + "typedoc"
 
+pkg := "package"
+
 test_cjs := "tests/cjs"
 test_esm := "tests/esm"
 test_dts := "tests/dts"
@@ -44,7 +46,7 @@ fmt:
 
 # Build package
 build:
-    cd ./package && ../{{tsdown}} -c tsdown.config.ts
+    cd ./{{pkg}} && ../{{tsdown}} -c tsdown.config.ts
 
 # Run tests
 test:
@@ -78,14 +80,30 @@ example-iife:
 
 # Generate APIs documentation
 api:
-    cd ./package && ../{{typedoc}}
+    cd ./{{pkg}} && ../{{typedoc}}
+
+# Publish package with dev tag as dry-run
+publish-dev-try:
+    cd ./{{pkg}} && pnpm publish --no-git-checks --tag dev --dry-run
+
+# Publish package with dev tag
+publish-dev:
+    cd ./{{pkg}} && pnpm publish --no-git-checks --tag dev
+
+# Publish package as dry-run
+publish-try:
+    cd ./{{pkg}} && pnpm publish --dry-run
+
+# Publish package
+publish:
+    cd ./{{pkg}} && pnpm publish
 
 # Clean builds
 clean:
-    rm -rf ./package/dist
+    rm -rf ./{{pkg}}/dist
 
 # Clean everything
 clean-all:
     rm -rf ./node_modules
-    rm -rf ./package/node_modules
+    rm -rf ./{{pkg}}/node_modules
     just clean
