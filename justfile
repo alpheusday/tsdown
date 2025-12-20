@@ -50,24 +50,23 @@ build:
 
 # Run tests
 test:
-    cd ./{{test_cjs}} && ./{{tsdown}} -c tsdown.config.ts && ./{{vitest}} run
-    cd ./{{test_esm}} && ./{{tsdown}} -c tsdown.config.ts && ./{{vitest}} run
-    cd ./{{test_dts}} && ./{{tsdown}} -c tsdown.config.ts && ./{{vitest}} run
-    cd ./{{test_iife}} && ./{{tsdown}} -c tsdown.config.ts && ./{{vitest}} run
+    cd ./{{test_cjs}} && ./{{vitest}} run
+    cd ./{{test_esm}} && ./{{vitest}} run
+    cd ./{{test_dts}} && ./{{vitest}} run
+    cd ./{{test_iife}} && ./{{vitest}} run
 
 # Run tests with different runtimes
 test-all:
-    cd ./{{test_cjs}} && pnpm run build && pnpm run test
-    cd ./{{test_cjs}} && bun run build && bun run test
+    cd ./{{test_cjs}} && pnpm run test
+    cd ./{{test_cjs}} && bun run test
 
-    cd ./{{test_esm}} && pnpm run build && pnpm run test
-    cd ./{{test_esm}} && bun run build && bun run test
+    cd ./{{test_esm}} && pnpm run test
+    cd ./{{test_esm}} && bun run test
+    cd ./{{test_dts}} && pnpm run test
+    cd ./{{test_dts}} && bun run test
 
-    cd ./{{test_dts}} && pnpm run build && pnpm run test
-    cd ./{{test_dts}} && bun run build && bun run test
-
-    cd ./{{test_iife}} && pnpm run build && pnpm run test
-    cd ./{{test_iife}} && bun run build && bun run test
+    cd ./{{test_iife}} && pnpm run test
+    cd ./{{test_iife}} && bun run test
 
 example-cjs:
     cd ./{{example_cjs}} && ./{{tsdown}} -c tsdown.config.ts

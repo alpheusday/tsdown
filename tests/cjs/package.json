@@ -2,7 +2,6 @@
     "name": "test-cjs",
     "private": true,
     "scripts": {
-        "build": "tsdown -c tsdown.config.ts",
         "test": "vitest run",
         "": ""
     },

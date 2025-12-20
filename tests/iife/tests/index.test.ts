@@ -1,7 +1,13 @@
+import type { UserConfig } from "tsdown";
+
 import Fs from "node:fs";
+import Fsp from "node:fs/promises";
 import Path from "node:path";
 
-import { describe, expect, it } from "vitest";
+import { defineConfig } from "@apst/tsdown";
+import { iifePreset } from "@apst/tsdown/presets";
+import { build } from "tsdown";
+import { beforeAll, describe, expect, it } from "vitest";
 
 const CWD: string = process.cwd();
 
@@ -13,6 +19,48 @@ const PATH_INDEX_PRD_MIN: string = Path.join(
     PATH_DIST,
     "init.production.min.js",
 );
+
+beforeAll(async (): Promise<void> => {
+    if (Fs.existsSync(PATH_DIST))
+        await Fsp.rm(PATH_DIST, {
+            recursive: true,
+            force: true,
+        });
+
+    const iifeDevOptions: UserConfig = {
+        entry: {
+            "init.development": "./src/init.ts",
+        },
+    };
+
+    const iifePrdOptions: UserConfig = {
+        entry: {
+            "init.production": "./src/init.ts",
+        },
+    };
+
+    const iifePrdMinOptions: UserConfig = {
+        entry: {
+            "init.production.min": "./src/init.ts",
+        },
+        minify: true,
+    };
+
+    const configs: UserConfig[] = defineConfig(
+        {
+            clean: false,
+        },
+        [
+            iifePreset(iifeDevOptions),
+            iifePreset(iifePrdOptions),
+            iifePreset(iifePrdMinOptions),
+        ],
+    );
+
+    for (const config of configs) {
+        await build(config);
+    }
+});
 
 describe("IIFE tests", (): void => {
     it("should have dist", async (): Promise<void> => {
