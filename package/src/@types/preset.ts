@@ -5,10 +5,6 @@ import type { UserConfig } from "tsdown";
  */
 type PresetOptions = {
     /**
-     * Type of the project.
-     */
-    type: "commonjs" | "module";
-    /**
      * Options.
      */
     options: UserConfig;
