@@ -82,6 +82,10 @@ export default defineConfig([
 ]);
 ```
 
+## APIs
+
+For the APIs, please refer to the [APIs](./apis/README.md).
+
 ## License
 
 This project is licensed under the terms of the MIT license.
