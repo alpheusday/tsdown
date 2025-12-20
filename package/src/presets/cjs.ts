@@ -28,6 +28,9 @@ type ExtraOptionsCJS = Partial<CompleteExtraOptionsCJS>;
  * Options for the CommonJS preset.
  */
 type PresetOptionsCJS = UserConfig & {
+    /**
+     * Preset-specific options.
+     */
     presetOptions?: ExtraOptionsCJS;
 };
 

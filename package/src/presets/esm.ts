@@ -28,6 +28,9 @@ type ExtraOptionsESM = Partial<CompleteExtraOptionsESM>;
  * Options for the ESModule preset.
  */
 type PresetOptionsESM = UserConfig & {
+    /**
+     * Preset-specific options.
+     */
     presetOptions?: ExtraOptionsESM;
 };
 
