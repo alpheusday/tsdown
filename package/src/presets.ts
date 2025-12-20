@@ -11,6 +11,7 @@ export type {
 export type { ExtraOptionsCJS, PresetOptionsCJS } from "#/presets/cjs";
 export type { ExtraOptionsDTS, PresetOptionsDTS } from "#/presets/dts";
 export type { ExtraOptionsESM, PresetOptionsESM } from "#/presets/esm";
+export type { PresetOptionsIIFE } from "#/presets/iife";
 
 export { blankPreset } from "#/presets/blank";
 export { cjsPreset } from "#/presets/cjs";

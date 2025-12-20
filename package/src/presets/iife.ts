@@ -5,11 +5,16 @@ import type { Preset, PresetResult } from "#/@types/preset";
 import { toMerged } from "es-toolkit";
 
 /**
+ * Options for the IIFE preset.
+ */
+type PresetOptionsIIFE = UserConfig;
+
+/**
  * IIFE preset.
  *
  * This preset includes the default IIFE options.
  */
-const iifePreset = (options?: UserConfig): Preset => {
+const iifePreset = (options?: PresetOptionsIIFE): Preset => {
     return ({ options: internalOptions }): PresetResult => {
         const optsPreset: UserConfig = {
             unbundle: false,
@@ -31,4 +36,5 @@ const iifePreset = (options?: UserConfig): Preset => {
     };
 };
 
+export type { PresetOptionsIIFE };
 export { iifePreset };
