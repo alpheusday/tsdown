@@ -36,12 +36,12 @@ const defineConfigFn = (
 ): UserConfig[] => {
     const opts: UserConfig = toMerged(OPTIONS_DEFAULT, options ?? {});
 
-    const presetResults: PresetResult[] = [];
-
     if (!presets)
-        return [
-            _defineConfig(opts),
-        ];
+        return _defineConfig([
+            opts,
+        ]);
+
+    const presetResults: PresetResult[] = [];
 
     for (const preset of presets) {
         const presetResult: PresetResult = preset({
