@@ -6,7 +6,7 @@
 type Preset = (options) => PresetResult;
 ```
 
-Defined in: [@types/preset.ts:30](https://github.com/alpheusday/tsdown/blob/dea1185874e16b7dc93035207cb8f7e5190036b6/package/src/@types/preset.ts#L30)
+Defined in: [@types/preset.ts:26](https://github.com/alpheusday/tsdown/blob/cb41bf71d2440cd45ebe47f812bca9d0e65c6c61/package/src/@types/preset.ts#L26)
 
 Preset for the build.
 

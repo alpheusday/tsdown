@@ -6,7 +6,7 @@
 type PresetResult = object;
 ```
 
-Defined in: [@types/preset.ts:20](https://github.com/alpheusday/tsdown/blob/dea1185874e16b7dc93035207cb8f7e5190036b6/package/src/@types/preset.ts#L20)
+Defined in: [@types/preset.ts:16](https://github.com/alpheusday/tsdown/blob/cb41bf71d2440cd45ebe47f812bca9d0e65c6c61/package/src/@types/preset.ts#L16)
 
 Preset result.
 
@@ -18,6 +18,6 @@ Preset result.
 optional options: UserConfig | UserConfig[];
 ```
 
-Defined in: [@types/preset.ts:24](https://github.com/alpheusday/tsdown/blob/dea1185874e16b7dc93035207cb8f7e5190036b6/package/src/@types/preset.ts#L24)
+Defined in: [@types/preset.ts:20](https://github.com/alpheusday/tsdown/blob/cb41bf71d2440cd45ebe47f812bca9d0e65c6c61/package/src/@types/preset.ts#L20)
 
 Options.
