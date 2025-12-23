@@ -15,7 +15,7 @@ catalogs:
   peer:
     tsdown:
       specifier: ~0.18.0
-      version: 0.18.0
+      version: 0.18.2
   test:
     vitest:
       specifier: ^4
@@ -35,8 +35,8 @@ importers:
         specifier: ^2.3.10
         version: 2.3.10
       tsdown:
-        specifier: ~0.18.1
-        version: 0.18.1(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        specifier: ~0.18.2
+        version: 0.18.2(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
       typedoc:
         specifier: ~0.28.15
         version: 0.28.15(typescript@5.9.3)
@@ -54,7 +54,7 @@ importers:
         version: link:../../package
       tsdown:
         specifier: catalog:peer
-        version: 0.18.0(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.2(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
 
   examples/esm:
     dependencies:
@@ -63,7 +63,7 @@ importers:
         version: link:../../package
       tsdown:
         specifier: catalog:peer
-        version: 0.18.0(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.2(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
 
   examples/iife:
     dependencies:
@@ -72,7 +72,7 @@ importers:
         version: link:../../package
       tsdown:
         specifier: catalog:peer
-        version: 0.18.0(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.2(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
 
   package:
     dependencies:
@@ -97,7 +97,7 @@ importers:
         version: 25.0.2
       tsdown:
         specifier: catalog:peer
-        version: 0.18.0(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.2(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
         version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
@@ -112,7 +112,7 @@ importers:
         version: 25.0.2
       tsdown:
         specifier: catalog:peer
-        version: 0.18.0(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.2(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
         version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
@@ -127,7 +127,7 @@ importers:
         version: 25.0.2
       tsdown:
         specifier: catalog:peer
-        version: 0.18.0(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.2(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
         version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
@@ -142,7 +142,7 @@ importers:
         version: 25.0.2
       tsdown:
         specifier: catalog:peer
-        version: 0.18.0(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.2(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
         version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
@@ -923,9 +923,6 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  birpc@3.0.0:
-    resolution: {integrity: sha512-by+04pHuxpCEQcucAXqzopqfhyI8TLK5Qg5MST0cB6MP+JhHna9ollrtK9moVh27aq6Q6MEJgebD0cVm//yBkg==}
-
   birpc@4.0.0:
     resolution: {integrity: sha512-LShSxJP0KTmd101b6DRyGBj57LZxSDYWKitQNW/mi8GRMvZb078Uf9+pveax1DrVL89vm7mWe+TovdI/UDOuPw==}
 
@@ -998,8 +995,11 @@ packages:
   hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
 
-  import-without-cache@0.2.4:
-    resolution: {integrity: sha512-b/Ke0y4n26ffQhkLvgBxV/NVO/QEE6AZlrMj8DYuxBWNAAu4iMQWZTFWzKcCTEmv7VQ0ae0j8KwrlGzSy8sYQQ==}
+  hookable@6.0.1:
+    resolution: {integrity: sha512-uKGyY8BuzN/a5gvzvA+3FVWo0+wUjgtfSdnmjtrOVwQCZPHpHDH2WRO3VZSOeluYrHoDCiXFffZXs8Dj1ULWtw==}
+
+  import-without-cache@0.2.5:
+    resolution: {integrity: sha512-B6Lc2s6yApwnD2/pMzFh/d5AVjdsDXjgkeJ766FmFuJELIGHNycKRj+l3A39yZPM4CchqNCB4RITEAYB1KUM6A==}
     engines: {node: '>=20.19.0'}
 
   jsesc@3.1.0:
@@ -1062,8 +1062,8 @@ packages:
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
-  rolldown-plugin-dts@0.18.3:
-    resolution: {integrity: sha512-rd1LZ0Awwfyn89UndUF/HoFF4oH9a5j+2ZeuKSJYM80vmeN/p0gslYMnHTQHBEXPhUlvAlqGA3tVgXB/1qFNDg==}
+  rolldown-plugin-dts@0.18.4:
+    resolution: {integrity: sha512-7UpdiICFd/BhdjKtDPeakCFRk6pbkTGFe0Z6u01egt4c8aoO+JoPGF1Smc+JRuCH2s5j5hBdteBi0e10G0xQdQ==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       '@ts-macro/tsc': ^0.3.6
@@ -1081,15 +1081,15 @@ packages:
       vue-tsc:
         optional: true
 
-  rolldown-plugin-dts@0.19.1:
-    resolution: {integrity: sha512-6z501zDTGq6ZrIEdk57qNUwq7kBRGzv3I3SAN2HMJ2KFYjHLnAuPYOmvfiwdxbRZMJ0iMdkV9rYdC3GjurT2cg==}
+  rolldown-plugin-dts@0.19.2:
+    resolution: {integrity: sha512-KbP0cnnjD1ubnyklqy6GCahvUsOrPFH4i+RTX6bNpyvh+jUsaxY01e9mLOU2NsGzQkJS/q4hbCbdcQoAmSWIYg==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       '@ts-macro/tsc': ^0.3.6
       '@typescript/native-preview': '>=7.0.0-dev.20250601.1'
       rolldown: ^1.0.0-beta.55
       typescript: ^5.0.0
-      vue-tsc: ~3.1.0
+      vue-tsc: ~3.2.0
     peerDependenciesMeta:
       '@ts-macro/tsc':
         optional: true
@@ -1181,8 +1181,8 @@ packages:
       unplugin-unused:
         optional: true
 
-  tsdown@0.18.1:
-    resolution: {integrity: sha512-na4MdVA8QS9Zw++0KovGpjvw1BY5WvoCWcE4Aw0dyfff9nWK8BPzniQEVs+apGUg3DHaYMDfs+XiFaDDgqDDzQ==}
+  tsdown@0.18.2:
+    resolution: {integrity: sha512-2o6p/9WjcQrgKnz5/VppOstsqXdTER6G6gPe5yhuP57AueIr2y/NQFKdFPHuqMqZpxRLVjm7MP/dXWG7EJpehg==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
@@ -1235,16 +1235,6 @@ packages:
 
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
-
-  unrun@0.2.19:
-    resolution: {integrity: sha512-DbwbJ9BvPEb3BeZnIpP9S5tGLO/JIgPQ3JrpMRFIfZMZfMG19f26OlLbC2ml8RRdrI2ZA7z2t+at5tsIHbh6Qw==}
-    engines: {node: '>=20.19.0'}
-    hasBin: true
-    peerDependencies:
-      synckit: ^0.11.11
-    peerDependenciesMeta:
-      synckit:
-        optional: true
 
   unrun@0.2.20:
     resolution: {integrity: sha512-YhobStTk93HYRN/4iBs3q3/sd7knvju1XrzwwrVVfRujyTG1K88hGONIxCoJN0PWBuO+BX7fFiHH0sVDfE3MWw==}
@@ -1852,8 +1842,6 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  birpc@3.0.0: {}
-
   birpc@4.0.0: {}
 
   brace-expansion@2.0.2:
@@ -1926,7 +1914,9 @@ snapshots:
 
   hookable@5.5.3: {}
 
-  import-without-cache@0.2.4: {}
+  hookable@6.0.1: {}
+
+  import-without-cache@0.2.5: {}
 
   jsesc@3.1.0: {}
 
@@ -2001,13 +1991,13 @@ snapshots:
 
   resolve-pkg-maps@1.0.0: {}
 
-  rolldown-plugin-dts@0.18.3(oxc-resolver@11.16.0)(rolldown@1.0.0-beta.53)(typescript@5.9.3):
+  rolldown-plugin-dts@0.18.4(oxc-resolver@11.16.0)(rolldown@1.0.0-beta.53)(typescript@5.9.3):
     dependencies:
       '@babel/generator': 7.28.5
       '@babel/parser': 7.28.5
       '@babel/types': 7.28.5
       ast-kit: 2.2.0
-      birpc: 3.0.0
+      birpc: 4.0.0
       dts-resolver: 2.1.3(oxc-resolver@11.16.0)
       get-tsconfig: 4.13.0
       magic-string: 0.30.21
@@ -2018,7 +2008,7 @@ snapshots:
     transitivePeerDependencies:
       - oxc-resolver
 
-  rolldown-plugin-dts@0.19.1(oxc-resolver@11.16.0)(rolldown@1.0.0-beta.55)(typescript@5.9.3):
+  rolldown-plugin-dts@0.19.2(oxc-resolver@11.16.0)(rolldown@1.0.0-beta.55)(typescript@5.9.3):
     dependencies:
       '@babel/generator': 7.28.5
       '@babel/parser': 7.28.5
@@ -2135,16 +2125,16 @@ snapshots:
       defu: 6.1.4
       empathic: 2.0.0
       hookable: 5.5.3
-      import-without-cache: 0.2.4
+      import-without-cache: 0.2.5
       obug: 2.1.1
       rolldown: 1.0.0-beta.53
-      rolldown-plugin-dts: 0.18.3(oxc-resolver@11.16.0)(rolldown@1.0.0-beta.53)(typescript@5.9.3)
+      rolldown-plugin-dts: 0.18.4(oxc-resolver@11.16.0)(rolldown@1.0.0-beta.53)(typescript@5.9.3)
       semver: 7.7.3
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tree-kill: 1.2.2
       unconfig-core: 7.4.2
-      unrun: 0.2.19(synckit@0.11.11)
+      unrun: 0.2.20(synckit@0.11.11)
     optionalDependencies:
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -2154,18 +2144,18 @@ snapshots:
       - synckit
       - vue-tsc
 
-  tsdown@0.18.1(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3):
+  tsdown@0.18.2(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3):
     dependencies:
       ansis: 4.2.0
       cac: 6.7.14
       defu: 6.1.4
       empathic: 2.0.0
-      hookable: 5.5.3
-      import-without-cache: 0.2.4
+      hookable: 6.0.1
+      import-without-cache: 0.2.5
       obug: 2.1.1
       picomatch: 4.0.3
       rolldown: 1.0.0-beta.55
-      rolldown-plugin-dts: 0.19.1(oxc-resolver@11.16.0)(rolldown@1.0.0-beta.55)(typescript@5.9.3)
+      rolldown-plugin-dts: 0.19.2(oxc-resolver@11.16.0)(rolldown@1.0.0-beta.55)(typescript@5.9.3)
       semver: 7.7.3
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
@@ -2207,12 +2197,6 @@ snapshots:
       quansync: 1.0.0
 
   undici-types@7.16.0: {}
-
-  unrun@0.2.19(synckit@0.11.11):
-    dependencies:
-      rolldown: 1.0.0-beta.53
-    optionalDependencies:
-      synckit: 0.11.11
 
   unrun@0.2.20(synckit@0.11.11):
     dependencies:
