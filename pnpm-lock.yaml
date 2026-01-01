@@ -15,7 +15,7 @@ catalogs:
   peer:
     tsdown:
       specifier: ~0.18.0
-      version: 0.18.3
+      version: 0.18.4
   test:
     vitest:
       specifier: ^4
@@ -35,8 +35,8 @@ importers:
         specifier: ^2.3.10
         version: 2.3.10
       tsdown:
-        specifier: ~0.18.3
-        version: 0.18.3(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        specifier: ~0.18.4
+        version: 0.18.4(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
       typedoc:
         specifier: ~0.28.15
         version: 0.28.15(typescript@5.9.3)
@@ -54,7 +54,7 @@ importers:
         version: link:../../package
       tsdown:
         specifier: catalog:peer
-        version: 0.18.3(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.4(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
 
   examples/esm:
     dependencies:
@@ -63,7 +63,7 @@ importers:
         version: link:../../package
       tsdown:
         specifier: catalog:peer
-        version: 0.18.3(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.4(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
 
   examples/iife:
     dependencies:
@@ -72,7 +72,7 @@ importers:
         version: link:../../package
       tsdown:
         specifier: catalog:peer
-        version: 0.18.3(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.4(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
 
   package:
     dependencies:
@@ -97,7 +97,7 @@ importers:
         version: 25.0.2
       tsdown:
         specifier: catalog:peer
-        version: 0.18.3(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.4(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
         version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
@@ -112,7 +112,7 @@ importers:
         version: 25.0.2
       tsdown:
         specifier: catalog:peer
-        version: 0.18.3(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.4(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
         version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
@@ -127,7 +127,7 @@ importers:
         version: 25.0.2
       tsdown:
         specifier: catalog:peer
-        version: 0.18.3(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.4(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
         version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
@@ -142,7 +142,7 @@ importers:
         version: 25.0.2
       tsdown:
         specifier: catalog:peer
-        version: 0.18.3(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
+        version: 0.18.4(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3)
       vitest:
         specifier: catalog:test
         version: 4.0.15(@types/node@25.0.2)(yaml@2.8.1)
@@ -424,8 +424,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@napi-rs/wasm-runtime@1.1.0':
-    resolution: {integrity: sha512-Fq6DJW+Bb5jaWE69/qOE0D1TUN9+6uWhCeZpdnSBk14pjLcCWR7Q8n49PTSPHazM37JqrsdpEthXy2xn6jWWiA==}
+  '@napi-rs/wasm-runtime@1.1.1':
+    resolution: {integrity: sha512-p64ah1M1ld8xjWv3qbvFwHiFVWrq1yFvV4f7w+mzaqiR4IlSgkqhcRdHwsGgomwzBH51sRY4NEowLxnaBjcW/A==}
 
   '@oxc-project/types@0.101.0':
     resolution: {integrity: sha512-nuFhqlUzJX+gVIPPfuE6xurd4lST3mdcWOhyK/rZO0B9XWMKm79SuszIQEnSMmmDhq1DC8WWVYGVd+6F93o1gQ==}
@@ -1181,8 +1181,8 @@ packages:
       unplugin-unused:
         optional: true
 
-  tsdown@0.18.3:
-    resolution: {integrity: sha512-OVFzktKDTglFAUh/WO8WamBUbZoBlJ9m7NgZZrVyIKe32BfXBeRZ+soFFpuOGVP8g8OU4tOLOpTyPTELWvcTFw==}
+  tsdown@0.18.4:
+    resolution: {integrity: sha512-J/tRS6hsZTkvqmt4+xdELUCkQYDuUCXgBv0fw3ImV09WPGbEKfsPD65E+WUjSu3E7Z6tji9XZ1iWs8rbGqB/ZA==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
@@ -1512,7 +1512,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@napi-rs/wasm-runtime@1.1.0':
+  '@napi-rs/wasm-runtime@1.1.1':
     dependencies:
       '@emnapi/core': 1.7.1
       '@emnapi/runtime': 1.7.1
@@ -1573,7 +1573,7 @@ snapshots:
 
   '@oxc-resolver/binding-wasm32-wasi@11.16.0':
     dependencies:
-      '@napi-rs/wasm-runtime': 1.1.0
+      '@napi-rs/wasm-runtime': 1.1.1
     optional: true
 
   '@oxc-resolver/binding-win32-arm64-msvc@11.16.0':
@@ -1654,12 +1654,12 @@ snapshots:
 
   '@rolldown/binding-wasm32-wasi@1.0.0-beta.53':
     dependencies:
-      '@napi-rs/wasm-runtime': 1.1.0
+      '@napi-rs/wasm-runtime': 1.1.1
     optional: true
 
   '@rolldown/binding-wasm32-wasi@1.0.0-beta.57':
     dependencies:
-      '@napi-rs/wasm-runtime': 1.1.0
+      '@napi-rs/wasm-runtime': 1.1.1
     optional: true
 
   '@rolldown/binding-win32-arm64-msvc@1.0.0-beta.53':
@@ -2144,7 +2144,7 @@ snapshots:
       - synckit
       - vue-tsc
 
-  tsdown@0.18.3(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3):
+  tsdown@0.18.4(oxc-resolver@11.16.0)(synckit@0.11.11)(typescript@5.9.3):
     dependencies:
       ansis: 4.2.0
       cac: 6.7.14
