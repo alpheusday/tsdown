@@ -1,6 +1,6 @@
 import type { OutExtensionObject, UserConfig } from "../node_modules/tsdown";
 
-import { defineConfig } from "../node_modules/tsdown";
+import { defineConfig } from "tsdown";
 
 const options: UserConfig = {
     entry: {
@@ -25,6 +25,7 @@ const options: UserConfig = {
 };
 
 export default defineConfig([
+    // @ts-expect-error
     {
         ...options,
         format: "esm",
@@ -32,6 +33,7 @@ export default defineConfig([
             js: ".mjs",
         }),
     },
+    // @ts-expect-error
     {
         ...options,
         format: "cjs",
@@ -39,6 +41,7 @@ export default defineConfig([
             js: ".js",
         }),
     },
+    // @ts-expect-error
     {
         ...options,
         dts: {
