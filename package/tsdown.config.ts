@@ -1,6 +1,6 @@
-import type { OutExtensionObject, UserConfig } from "tsdown";
+import type { OutExtensionObject, UserConfig } from "../node_modules/tsdown";
 
-import { defineConfig } from "tsdown";
+import { defineConfig } from "../node_modules/tsdown";
 
 const options: UserConfig = {
     entry: {
