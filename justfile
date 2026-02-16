@@ -36,7 +36,7 @@ tsc:
 
 # Lint code
 lint:
-    ls-lint
+    ls-lint -config .ls-lint.yaml
     typos
     just tsc
 
