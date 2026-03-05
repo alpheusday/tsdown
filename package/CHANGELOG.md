@@ -2,7 +2,11 @@
 
 ### Breaking Changes
 
-- set minimum supported tsdown version to 0.21.0
+- set `tsdown` minimum supported version to `0.21.0`
+
+### What's Changed
+
+- set `es-toolkit` supported version range to `^1.40.0`
 
 ## 0.1.2 (2026-01-25)
 

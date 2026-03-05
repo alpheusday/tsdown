@@ -77,7 +77,7 @@ importers:
   package:
     dependencies:
       es-toolkit:
-        specifier: ^1.43.0
+        specifier: ^1.40.0
         version: 1.43.0
     devDependencies:
       '@types/node':

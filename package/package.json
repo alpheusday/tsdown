@@ -43,7 +43,7 @@
         "dist"
     ],
     "dependencies": {
-        "es-toolkit": "^1.43.0"
+        "es-toolkit": "^1.40.0"
     },
     "devDependencies": {
         "@types/node": "catalog:dev",
