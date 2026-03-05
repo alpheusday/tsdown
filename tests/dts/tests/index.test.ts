@@ -22,7 +22,11 @@ beforeAll(async (): Promise<void> => {
             },
         },
         [
-            dtsPreset(),
+            dtsPreset({
+                presetOptions: {
+                    performanceMode: true,
+                }
+            }),
         ],
     );
 
