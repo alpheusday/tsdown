@@ -7,6 +7,7 @@
 ### What's Changed
 
 - set `es-toolkit` supported version range to `^1.40.0`
+- remove `@types/node` from `devDependencies`
 
 ## 0.1.2 (2026-01-25)
 
