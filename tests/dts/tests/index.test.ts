@@ -25,7 +25,7 @@ beforeAll(async (): Promise<void> => {
             dtsPreset({
                 presetOptions: {
                     performanceMode: true,
-                }
+                },
             }),
         ],
     );
