@@ -24,7 +24,6 @@ jobs:
                     - name: Windows
                       code: windows-latest
                 node:
-                    - 20
                     - 22
                     - 24
                     - 25
