@@ -6,7 +6,7 @@
 function iifePreset(options?): Preset;
 ```
 
-Defined in: [presets/iife.ts:17](https://github.com/alpheusday/tsdown/blob/f44012dc28a7b75919fd32acf32e9bc2656b7ae2/package/src/presets/iife.ts#L17)
+Defined in: [presets/iife.ts:17](https://github.com/alpheusday/tsdown/blob/836a3bd0b140561314f002d2a7d17740f7babaa2/package/src/presets/iife.ts#L17)
 
 IIFE preset.
 

@@ -1,6 +1,6 @@
 [< Back](./../README.md)
 
-# @apst/tsdown v0.1.1
+# @apst/tsdown v0.2.0
 
 ## Modules
 
